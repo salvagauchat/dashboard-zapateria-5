@@ -30,23 +30,30 @@ function Chart() {
                                 <th>Genero</th>
                                 <th>Marca</th>
                                 <th>Precio</th>
+                                <th>Detalle</th>
+
                             </tr>
                         </thead>
-                    
-                    {totalProducts.length > 0 && totalProducts.map((product) => {
-                        return (
-                            <>
 
-                                <tr>
-                                    <th>{product.name}</th>
-                                    <th>{product.gender.name}</th>
-                                    <th>{product.brands.name}</th>
-                                    <th>{product.price}</th>
-                                </tr>
-                            </>
-                        )
-                    })}
-                </table>
+                        {totalProducts.length > 0 && totalProducts.map((product) => {
+                            return (
+                                <>
+
+                                    <tr>
+                                        <th>{product.name}</th>
+                                        <th>{product.gender.name}</th>
+                                        <th>{product.brands.name}</th>
+                                        <th>{product.price}</th>
+                                        <th><button class="btn btn-secundary">
+                                            <a href={product.idDetalle}><span class="button_top"> Detalle
+                                            </span></a>
+                                        </button>
+                                        </th>
+                                    </tr>
+                                </>
+                            )
+                        })}
+                    </table>
                 </div>
             </div>
         </div>
